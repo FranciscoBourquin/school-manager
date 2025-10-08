@@ -2,7 +2,8 @@ import mongoose from "mongoose";
 
 const collection = "students";
 
-const studentSchema = new mongoose.Schema( {
+const studentSchema = new mongoose.Schema( 
+    {
     nombre: {
         type: String,
         required: true,
@@ -17,12 +18,13 @@ const studentSchema = new mongoose.Schema( {
 
     cursos: 
     {
-        type: [],
+        type: [String],
         required: true,
         enum: ["Matemática" , "Historia" , "Ciencias" , "Arte"]
     },
-
-    timestamps: true
-});
+},
+    {
+        timestamps: true
+    })
 
 export const studentModel =  mongoose.model(collection, studentSchema);
