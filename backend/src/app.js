@@ -12,4 +12,4 @@ app.use("/api/students/", studentsRouter)
 
 connectDB();
 
-app.listen(PORT, () => console.log(`Server listening on port: ${PORT}`));
+app.listen(PORT, () => console.log(`Servidor escuchando en el puerto: ${PORT}`));
