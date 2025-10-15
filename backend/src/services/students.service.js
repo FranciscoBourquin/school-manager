@@ -23,10 +23,13 @@ export const createStudentService = async (studentInfo) => {
     
 }
 
-export const updateStudentByIdService = async (id) => {
+export const updateStudentByIdService = async (id, studentInfo) => {
+    const updatedStudent = await studentModel.findByIdAndUpdate(id, studentInfo, {new:true});
+    return updatedStudent;
 
-};
+}
 
-export const deleteStudentByIdService = async () => {
-
-};
+export const deleteStudentByIdService = async (id) => {
+    const deleteStudent = await studentModel.findByIdAndDelete(id);
+    return deleteStudent;
+}
