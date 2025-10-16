@@ -12,5 +12,5 @@ app.get("/", ()=> console.log("API en Vercel funcionando"));
 app.use("/api/students/", studentsRouter)
 
 connectDB()
-app.listen(PORT, (console.log(`Servidor escuchando en ${PORT}`)
+app.listen(PORT, "0.0.0.0", (console.log(`Servidor escuchando en ${PORT}`)
 ))
