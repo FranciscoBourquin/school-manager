@@ -8,6 +8,7 @@ const PORT = process.env.PORT;
 const app = express();
 
 app.use(express.json());
+app.get("/", console.log("API en Vercel funcionando"));
 app.use("/api/students/", studentsRouter)
 
 connectDB()
