@@ -10,6 +10,7 @@ const app = express();
 app.use(express.json());
 app.use("/api/students/", studentsRouter)
 
-connectDB();
+connectDB()
+.then(console.log(`Servidor escuchando en el puerto: ${PORT}`));
 
-app.listen(PORT, () => console.log(`Servidor escuchando en el puerto: ${PORT}`));
+export default app;
