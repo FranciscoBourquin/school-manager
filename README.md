@@ -126,4 +126,7 @@ Autenticación/autorización.
 
 Frontend React para consumir la API.
 
+Créditos:
+API desarrollada por Francisco Bourquin
+
 
