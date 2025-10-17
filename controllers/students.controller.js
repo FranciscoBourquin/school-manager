@@ -10,6 +10,10 @@ export const getStudentsController = async (req, res) => {
                     message: `No hay estudiantes inscriptos en el curso de ${course}`,
                     students})
             }
+
+            return res.status(200).json({ 
+                message: `Estudiantes inscriptos en el curso de ${course}`}, 
+                students)
         }
 
         const students = await getStudentsService();
